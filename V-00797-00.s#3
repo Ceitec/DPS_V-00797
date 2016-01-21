@@ -1538,10 +1538,10 @@ paja@paja-trb.cz
 <part name="R31" library="#PaJa_31" deviceset="R" device="_1206" value="0R"/>
 <part name="R32" library="#PaJa_31" deviceset="R" device="_1206" value="0R"/>
 <part name="R33" library="#PaJa_31" deviceset="R" device="_1206" value="0R"/>
-<part name="C1" library="#PaJa_31" deviceset="C-KER" device="_1206"/>
-<part name="C2" library="#PaJa_31" deviceset="C-KER" device="_1206"/>
-<part name="R34" library="#PaJa_31" deviceset="R" device="_1206"/>
-<part name="R35" library="#PaJa_31" deviceset="R" device="_1206"/>
+<part name="C1" library="#PaJa_31" deviceset="C-KER" device="_1206" value="100n"/>
+<part name="C2" library="#PaJa_31" deviceset="C-KER" device="_1206" value="100n"/>
+<part name="R34" library="#PaJa_31" deviceset="R" device="_1206" value="10k"/>
+<part name="R35" library="#PaJa_31" deviceset="R" device="_1206" value="10k"/>
 <part name="JUM3" library="#PaJa_konektory" deviceset="S1G3_JUMP" device=""/>
 <part name="JUM8" library="#PaJa_konektory" deviceset="S1G2_JUMP" device=""/>
 </parts>
@@ -2119,6 +2119,7 @@ paja@paja-trb.cz
 <wire x1="116.84" y1="60.96" x2="101.6" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="60.96" x2="99.06" y2="60.96" width="0.1524" layer="91"/>
 <junction x="101.6" y="60.96"/>
+<label x="99.06" y="60.96" size="1.016" layer="95" ratio="10" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$41" class="0">

@@ -1572,7 +1572,7 @@ paja@paja-trb.cz
 <instance part="R13" gate="R" x="127" y="93.98"/>
 <instance part="R14" gate="R" x="134.62" y="88.9"/>
 <instance part="R15" gate="R" x="127" y="83.82"/>
-<instance part="R16" gate="R" x="134.62" y="78.74"/>
+<instance part="R16" gate="R" x="134.62" y="76.2"/>
 <instance part="JUM1" gate="JUM" x="22.86" y="142.24" rot="R90"/>
 <instance part="R25" gate="R" x="116.84" y="99.06"/>
 <instance part="R26" gate="R" x="60.96" y="144.78"/>
@@ -1782,9 +1782,9 @@ paja@paja-trb.cz
 <segment>
 <pinref part="IC2" gate="A" pin="QH"/>
 <wire x1="96.52" y1="88.9" x2="101.6" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="88.9" x2="101.6" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="88.9" x2="101.6" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="R16" gate="R" pin="1"/>
-<wire x1="101.6" y1="78.74" x2="129.54" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="76.2" x2="129.54" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$23" class="0">
@@ -1880,8 +1880,8 @@ paja@paja-trb.cz
 <net name="N$33" class="0">
 <segment>
 <pinref part="R16" gate="R" pin="2"/>
-<wire x1="139.7" y1="78.74" x2="160.02" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="78.74" x2="160.02" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="76.2" x2="160.02" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="76.2" x2="160.02" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="DP-9"/>
 <wire x1="160.02" y1="99.06" x2="170.18" y2="99.06" width="0.1524" layer="91"/>
 </segment>

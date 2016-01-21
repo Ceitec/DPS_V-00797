@@ -2306,7 +2306,7 @@ paja@paja-trb.cz
 <wire x1="73.66" y1="76.2" x2="88.9" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$44" class="0">
+<net name="OCB1" class="0">
 <segment>
 <pinref part="R34" gate="R" pin="2"/>
 <pinref part="C1" gate="C" pin="2"/>
@@ -2319,7 +2319,7 @@ paja@paja-trb.cz
 <wire x1="119.38" y1="78.74" x2="127" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$46" class="0">
+<net name="INT1" class="0">
 <segment>
 <pinref part="R35" gate="R" pin="2"/>
 <pinref part="C2" gate="C" pin="2"/>

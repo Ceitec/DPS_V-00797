@@ -1389,10 +1389,10 @@ paja@paja-trb.cz
 <part name="X4" library="LIC_ALL-00" deviceset="PB61412L" device="-NEUTRAL" value="PB61412L-OK"/>
 <part name="R17" library="#PaJa_31" deviceset="R" device="_1206" value="10k"/>
 <part name="R18" library="#PaJa_31" deviceset="R" device="_1206" value="10k"/>
-<part name="R19" library="#PaJa_31" deviceset="R" device="_1206" value="560R"/>
-<part name="R20" library="#PaJa_31" deviceset="R" device="_1206" value="560R"/>
-<part name="R21" library="#PaJa_31" deviceset="R" device="_1206" value="560R"/>
-<part name="R22" library="#PaJa_31" deviceset="R" device="_1206" value="560R"/>
+<part name="R19" library="#PaJa_31" deviceset="R" device="_1206" value="330R"/>
+<part name="R20" library="#PaJa_31" deviceset="R" device="_1206" value="330R"/>
+<part name="R21" library="#PaJa_31" deviceset="R" device="_1206" value="330R"/>
+<part name="R22" library="#PaJa_31" deviceset="R" device="_1206" value="330R"/>
 <part name="R23" library="#PaJa_31" deviceset="R" device="_1206" value="10k"/>
 <part name="R24" library="#PaJa_31" deviceset="R" device="_1206" value="10k"/>
 <part name="JUM2" library="#PaJa_konektory" deviceset="S1G8_JUMP" device=""/>

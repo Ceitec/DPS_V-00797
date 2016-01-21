@@ -1213,6 +1213,10 @@ paja@paja-trb.cz
 <hole x="-2.54" y="0" drill="1.1"/>
 <text x="-3.81" y="3.81" size="0.762" layer="21">&gt;NAME</text>
 <text x="-3.81" y="-5.08" size="0.762" layer="21">&gt;VALUE</text>
+<wire x1="-3" y1="-3" x2="3" y2="-3" width="0.127" layer="21"/>
+<wire x1="3" y1="-3" x2="3" y2="3" width="0.127" layer="21"/>
+<wire x1="3" y1="3" x2="-3" y2="3" width="0.127" layer="21"/>
+<wire x1="-3" y1="3" x2="-3" y2="-3" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -1321,6 +1325,15 @@ paja@paja-trb.cz
 <part name="JUM2" library="#PaJa_konektory" deviceset="S1G2_JUMP" device=""/>
 <part name="JUM5" library="#PaJa_konektory" deviceset="S1G2_JUMP" device=""/>
 <part name="JUM6" library="#PaJa_konektory" deviceset="S1G2_JUMP" device=""/>
+<part name="R25" library="#PaJa_31" deviceset="R" device="_1206" value="0R"/>
+<part name="R26" library="#PaJa_31" deviceset="R" device="_1206" value="0R"/>
+<part name="R27" library="#PaJa_31" deviceset="R" device="_1206" value="0R"/>
+<part name="R28" library="#PaJa_31" deviceset="R" device="_1206" value="0R"/>
+<part name="R29" library="#PaJa_31" deviceset="R" device="_1206" value="0R"/>
+<part name="R30" library="#PaJa_31" deviceset="R" device="_1206" value="0R"/>
+<part name="R31" library="#PaJa_31" deviceset="R" device="_1206" value="0R"/>
+<part name="R32" library="#PaJa_31" deviceset="R" device="_1206" value="0R"/>
+<part name="R33" library="#PaJa_31" deviceset="R" device="_1206" value="0R"/>
 </parts>
 <sheets>
 <sheet>
@@ -1351,6 +1364,15 @@ paja@paja-trb.cz
 <instance part="R15" gate="R" x="127" y="83.82"/>
 <instance part="R16" gate="R" x="134.62" y="78.74"/>
 <instance part="JUM1" gate="JUM" x="22.86" y="142.24" rot="R90"/>
+<instance part="R25" gate="R" x="116.84" y="99.06"/>
+<instance part="R26" gate="R" x="60.96" y="144.78"/>
+<instance part="R27" gate="R" x="58.42" y="93.98"/>
+<instance part="R28" gate="R" x="58.42" y="83.82"/>
+<instance part="R29" gate="R" x="48.26" y="101.6" rot="R90"/>
+<instance part="R30" gate="R" x="45.72" y="88.9" rot="R90"/>
+<instance part="R31" gate="R" x="45.72" y="114.3" rot="R90"/>
+<instance part="R32" gate="R" x="71.12" y="35.56"/>
+<instance part="R33" gate="R" x="60.96" y="35.56"/>
 </instances>
 <busses>
 </busses>
@@ -1537,7 +1559,13 @@ paja@paja-trb.cz
 <segment>
 <pinref part="R12" gate="R" pin="1"/>
 <pinref part="IC2" gate="A" pin="QD"/>
-<wire x1="129.54" y1="99.06" x2="96.52" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="99.06" x2="121.92" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="R25" gate="R" pin="1"/>
+<wire x1="121.92" y1="99.06" x2="111.76" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="99.06" x2="96.52" y2="99.06" width="0.1524" layer="91"/>
+<junction x="111.76" y="99.06"/>
+<pinref part="R25" gate="R" pin="2"/>
+<junction x="121.92" y="99.06"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -1689,9 +1717,16 @@ paja@paja-trb.cz
 <pinref part="IC2" gate="P" pin="GND"/>
 <wire x1="66.04" y1="35.56" x2="76.2" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="35.56" x2="76.2" y2="40.64" width="0.1524" layer="91"/>
-<label x="60.96" y="35.56" size="1.016" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
-<wire x1="66.04" y1="35.56" x2="60.96" y2="35.56" width="0.1524" layer="91"/>
+<label x="45.72" y="35.56" size="1.016" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
+<wire x1="66.04" y1="35.56" x2="55.88" y2="35.56" width="0.1524" layer="91"/>
 <junction x="66.04" y="35.56"/>
+<pinref part="R32" gate="R" pin="1"/>
+<pinref part="R32" gate="R" pin="2"/>
+<junction x="76.2" y="35.56"/>
+<pinref part="R33" gate="R" pin="1"/>
+<wire x1="55.88" y1="35.56" x2="45.72" y2="35.56" width="0.1524" layer="91"/>
+<junction x="55.88" y="35.56"/>
+<pinref part="R33" gate="R" pin="2"/>
 </segment>
 <segment>
 <pinref part="JUM1" gate="JUM" pin="1"/>
@@ -1702,14 +1737,20 @@ paja@paja-trb.cz
 <net name="N$35" class="0">
 <segment>
 <pinref part="IC1" gate="A" pin="SCK"/>
-<wire x1="71.12" y1="144.78" x2="53.34" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="144.78" x2="66.04" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="A" pin="SCK"/>
+<wire x1="66.04" y1="144.78" x2="55.88" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="144.78" x2="53.34" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="101.6" x2="53.34" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="101.6" x2="53.34" y2="144.78" width="0.1524" layer="91"/>
 <junction x="53.34" y="144.78"/>
 <pinref part="JUM1" gate="JUM" pin="6"/>
 <wire x1="25.4" y1="147.32" x2="53.34" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="147.32" x2="53.34" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="R26" gate="R" pin="1"/>
+<junction x="55.88" y="144.78"/>
+<pinref part="R26" gate="R" pin="2"/>
+<junction x="66.04" y="144.78"/>
 </segment>
 </net>
 <net name="N$36" class="0">
@@ -1730,12 +1771,24 @@ paja@paja-trb.cz
 <pinref part="IC1" gate="A" pin="RCK"/>
 <wire x1="71.12" y1="137.16" x2="48.26" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="A" pin="RCK"/>
-<wire x1="71.12" y1="93.98" x2="48.26" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="93.98" x2="48.26" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="93.98" x2="63.5" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="93.98" x2="53.34" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="93.98" x2="48.26" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="93.98" x2="48.26" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="JUM1" gate="JUM" pin="4"/>
+<wire x1="48.26" y1="96.52" x2="48.26" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="106.68" x2="48.26" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="142.24" x2="48.26" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="142.24" x2="48.26" y2="137.16" width="0.1524" layer="91"/>
 <junction x="48.26" y="137.16"/>
+<pinref part="R27" gate="R" pin="1"/>
+<junction x="53.34" y="93.98"/>
+<pinref part="R27" gate="R" pin="2"/>
+<junction x="63.5" y="93.98"/>
+<pinref part="R29" gate="R" pin="1"/>
+<junction x="48.26" y="96.52"/>
+<pinref part="R29" gate="R" pin="2"/>
+<junction x="48.26" y="106.68"/>
 </segment>
 </net>
 <net name="N$38" class="0">
@@ -1743,12 +1796,29 @@ paja@paja-trb.cz
 <pinref part="IC1" gate="A" pin="G"/>
 <wire x1="71.12" y1="127" x2="45.72" y2="127" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="A" pin="G"/>
-<wire x1="71.12" y1="83.82" x2="45.72" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="83.82" x2="45.72" y2="127" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="83.82" x2="63.5" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="83.82" x2="53.34" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="83.82" x2="45.72" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="83.82" x2="45.72" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="JUM1" gate="JUM" pin="3"/>
+<wire x1="45.72" y1="93.98" x2="45.72" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="109.22" x2="45.72" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="119.38" x2="45.72" y2="127" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="139.7" x2="45.72" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="139.7" x2="45.72" y2="127" width="0.1524" layer="91"/>
 <junction x="45.72" y="127"/>
+<pinref part="R28" gate="R" pin="1"/>
+<junction x="53.34" y="83.82"/>
+<pinref part="R28" gate="R" pin="2"/>
+<junction x="63.5" y="83.82"/>
+<pinref part="R30" gate="R" pin="1"/>
+<junction x="45.72" y="83.82"/>
+<pinref part="R30" gate="R" pin="2"/>
+<junction x="45.72" y="93.98"/>
+<pinref part="R31" gate="R" pin="1"/>
+<junction x="45.72" y="109.22"/>
+<pinref part="R31" gate="R" pin="2"/>
+<junction x="45.72" y="119.38"/>
 </segment>
 </net>
 </nets>
@@ -1871,14 +1941,11 @@ paja@paja-trb.cz
 </net>
 <net name="TL2IN" class="0">
 <segment>
-<pinref part="X3" gate="X$1" pin="1"/>
-<wire x1="48.26" y1="119.38" x2="40.64" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="R18" gate="R" pin="1"/>
-<wire x1="38.1" y1="124.46" x2="40.64" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="124.46" x2="40.64" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="119.38" x2="35.56" y2="119.38" width="0.1524" layer="91"/>
-<label x="35.56" y="119.38" size="1.016" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
-<junction x="40.64" y="119.38"/>
+<pinref part="X3" gate="X$1" pin="2"/>
+<wire x1="68.58" y1="119.38" x2="73.66" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="119.38" x2="73.66" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="124.46" x2="38.1" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="205.74" y1="160.02" x2="210.82" y2="160.02" width="0.1524" layer="91"/>
@@ -1985,6 +2052,13 @@ paja@paja-trb.cz
 <wire x1="231.14" y1="162.56" x2="236.22" y2="162.56" width="0.1524" layer="91"/>
 <label x="236.22" y="162.56" size="1.016" layer="95" font="vector" ratio="10" xref="yes"/>
 <pinref part="JUM2" gate="JUMP" pin="1"/>
+</segment>
+</net>
+<net name="N$40" class="0">
+<segment>
+<pinref part="X3" gate="X$1" pin="1"/>
+<wire x1="48.26" y1="119.38" x2="35.56" y2="119.38" width="0.1524" layer="91"/>
+<label x="35.56" y="119.38" size="1.016" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
